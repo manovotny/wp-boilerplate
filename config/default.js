@@ -19,7 +19,7 @@ module.exports = (function () {
             from: 'NAME',
             to: 'NAME'
         },
-        repositroy: {
+        repository: {
             from: 'REPOSITORY',
             to: 'REPOSITORY'
         },
