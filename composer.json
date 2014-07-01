@@ -1,0 +1,17 @@
+{
+  "name": "manovotny/REPOSITORY",
+  "version": "0.0.0",
+  "description": "DESCRIPTION",
+  "type": "library",
+  "homepage": "https://github.com/manovotny/REPOSITORY/",
+  "license": "GPL-3.0+",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/manovotny/TODO"
+    }
+  ],
+  "require": {
+    "manovotny/TODO": "0.0.0"
+    }
+}
