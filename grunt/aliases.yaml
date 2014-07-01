@@ -7,9 +7,6 @@ build:
   - css
   - js
 
-bump:
-  - replace
-
 css:
   - clean:css
   - scsslint
