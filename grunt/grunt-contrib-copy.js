@@ -2,16 +2,18 @@ module.exports = function (grunt) {
 
     'use strict';
 
+    var config = require('config');
+
     grunt.config('copy', {
         bower: {
             files: [
                 {
                     expand: true,
-                    cwd: 'bower_components/sass-lint-config',
+                    cwd: config.directories.bower + '/sass-lint-config',
                     src: [
-                        '.scss-lint.yml'
+                        config.files.sass.lint
                     ],
-                    dest: 'config'
+                    dest: config.directories.config
                 }
             ]
         },
@@ -19,11 +21,11 @@ module.exports = function (grunt) {
             files: [
                 {
                     expand: true,
-                    cwd: 'vendor/manovotny',
+                    cwd: config.directories.composer + '/manovotny',
                     src: [
                         '**/*'
                     ],
-                    dest: 'lib'
+                    dest: config.directories.lib
                 }
             ]
         }

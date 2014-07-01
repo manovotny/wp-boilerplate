@@ -2,18 +2,20 @@ module.exports = function (grunt) {
 
     'use strict';
 
+    var config = require('config');
+
     grunt.config('clean', {
         css: [
-            'admin/css',
-            'css'
+            config.directories.admin + '/' + config.directories.css,
+            config.directories.css
         ],
         js: [
             ''
         ],
         lib: [
-            'composer.lock',
-            'config/.scss-lint.yml',
-            'lib'
+            config.files.composer.lock,
+            config.directories.config + '/' + config.files.sass.lint,
+            config.directories.lib
         ]
     });
 
