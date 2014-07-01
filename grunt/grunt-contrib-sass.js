@@ -2,12 +2,7 @@ module.exports = function (grunt) {
 
     'use strict';
 
-    var directories = {
-            admin: 'admin',
-            css: 'css',
-            sass: 'sass'
-        },
-        expand = true,
+    var expand = true,
         extension = '.css',
         options = {
             noCache: true
@@ -22,16 +17,16 @@ module.exports = function (grunt) {
             files: [
                 {
                     expand: expand,
-                    cwd: directories.admin + '/' + directories.sass,
+                    cwd: config.paths.admin + '/' + config.paths.sass,
                     src: source,
-                    dest: directories.admin + '/' + directories.css,
+                    dest: config.paths.admin + '/' + config.paths.css,
                     ext: extension
                 },
                 {
                     expand: expand,
-                    cwd: directories.sass,
+                    cwd: config.paths.sass,
                     src: source,
-                    dest: directories.css,
+                    dest: config.paths.css,
                     ext: extension
                 }
             ]

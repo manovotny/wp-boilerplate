@@ -29,10 +29,10 @@ module.exports = function (grunt) {
         description: {
             src: [
                 '*.php',
-                'bower.json',
-                'composer.json',
-                'package.json',
-                'README.md'
+                config.files.bower,
+                config.files.composer,
+                config.files.package,
+                config.files.readme
             ],
             overwrite: overwrite,
             replacements: [
@@ -81,10 +81,10 @@ module.exports = function (grunt) {
         repository: {
             src: [
                 '*.php',
-                'bower.json',
-                'composer.json',
-                'package.json',
-                'README.md'
+                config.files.bower,
+                config.files.composer,
+                config.files.package,
+                config.files.readme
             ],
             overwrite: overwrite,
             replacements: [
@@ -108,10 +108,11 @@ module.exports = function (grunt) {
         },
         version: {
             src: [
-                'bower.json',
-                'classes/**/*.php',
-                'composer.json',
-                'package.json'
+                config.paths.classes + '/**/*.php',
+
+                config.files.bower,
+                config.files.composer,
+                config.files.package
             ],
             overwrite: overwrite,
             replacements: [
@@ -127,7 +128,7 @@ module.exports = function (grunt) {
         },
         updatePrevious: {
             src: [
-                'grunt/grunt-text-replace.js'
+                config.paths.grunt + '/grunt-text-replace.js'
             ],
             overwrite: overwrite,
             replacements: [

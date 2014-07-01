@@ -9,11 +9,11 @@ module.exports = function (grunt) {
             files: [
                 {
                     expand: true,
-                    cwd: config.directories.bower + '/sass-lint-config',
+                    cwd: config.paths.bower + '/sass-lint-config',
                     src: [
-                        config.files.sass.lint
+                        config.files.sassLint
                     ],
-                    dest: config.directories.config
+                    dest: config.paths.config
                 }
             ]
         },
@@ -21,11 +21,11 @@ module.exports = function (grunt) {
             files: [
                 {
                     expand: true,
-                    cwd: config.directories.composer + '/manovotny',
+                    cwd: config.paths.composer + '/manovotny',
                     src: [
                         '**/*'
                     ],
-                    dest: config.directories.lib
+                    dest: config.paths.lib
                 }
             ]
         }

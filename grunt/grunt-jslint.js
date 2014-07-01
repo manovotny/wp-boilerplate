@@ -2,27 +2,32 @@ module.exports = function (grunt) {
 
     'use strict';
 
+    var config = require('config'),
+        exclude = [
+            'module',
+            'require'
+        ];
+
     grunt.config('jslint', {
         js: {
             directives: {
                 browser: true,
                 nomen: true,
-                predef: [
-                    'module',
-                    'require'
-                ]
+                predef: exclude
             },
             src: [
-                '!admin/js/**/*.min.js',
-                '!js/**/*.min.js',
-                'admin/js/**/*.js',
-                'bower.json',
-                'composer.json',
-                'config/*.js',
-                'Gruntfile.js',
-                'grunt/*.js',
-                'js/**/*.js',
-                'package.json'
+                '!' + config.paths.admin + '/' + config.paths.js + '/**/*.min.js',
+                '!' + config.paths.js + '/**/*.min.js',
+
+                config.paths.admin + '/' + config.paths.js + '/**/*.js',
+                config.paths.js + '/**/*.js',
+                config.paths.config + '/*.js',
+                config.paths.grunt + '/*.js',
+
+                config.files.bower,
+                config.files.composer,
+                config.files.grunt,
+                config.files.package
             ]
         }
     });

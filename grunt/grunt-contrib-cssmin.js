@@ -2,11 +2,7 @@ module.exports = function (grunt) {
 
     'use strict';
 
-    var directories = {
-            admin: 'admin/css',
-            css: 'css'
-        },
-        expand = true,
+    var expand = true,
         extension = '.min.css',
         options = {
             keepSpecialComments: 0
@@ -20,17 +16,17 @@ module.exports = function (grunt) {
         admin: {
             options: options,
             expand: expand,
-            cwd: directories.admin,
+            cwd: config.paths.admin + '/' + config.paths.css,
             src: source,
-            dest: directories.admin,
+            dest: config.paths.admin + '/' + config.paths.css,
             ext: extension
         },
         css: {
             options: options,
             expand: expand,
-            cwd: directories.css,
+            cwd: config.paths.css,
             src: source,
-            dest: directories.css,
+            dest: config.paths.css,
             ext: extension
         }
     });

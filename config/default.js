@@ -5,24 +5,28 @@ module.exports = (function () {
     return {
         copyright: '2014',
         description: 'DESCRIPTION',
-        directories: {
+        files: {
+            bower: 'bower.json',
+            composer: 'composer.json',
+            composerLock: 'composer.lock',
+            grunt: 'Gruntfile.js',
+            package: 'package.json',
+            readme: 'README.md',
+            sassLint: '.scss-lint.yml'
+        },
+        package: 'PACKAGE',
+        paths: {
             admin: 'admin',
             bower: 'bower_components',
+            classes: 'classes',
             composer: 'vendor',
             config: 'config',
             css: 'css',
+            grunt: 'grunt',
+            js: 'js',
             lib: 'lib',
             sass: 'sass'
         },
-        files: {
-            composer: {
-                lock: 'composer.lock'
-            },
-            sass: {
-                lint: '.scss-lint.yml'
-            }
-        },
-        package: 'PACKAGE',
         name: 'NAME',
         repository: 'REPOSITORY',
         version: '0.0.0'

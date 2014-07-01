@@ -7,11 +7,11 @@ module.exports = function (grunt) {
     grunt.config('scsslint', {
         sass: {
             options: {
-                config: config.directories.config + '/' + config.files.sass.lint
+                config: config.paths.config + '/' + config.files.sassLint
             },
             src: [
-                'admin/sass/**/*.scss',
-                'sass/**/*.scss'
+                config.paths.admin + '/' + config.paths.sass + '/**/*.scss',
+                config.paths.sass + '/**/*.scss'
             ]
         }
     });

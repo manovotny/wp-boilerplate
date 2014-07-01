@@ -2,11 +2,13 @@ module.exports = function (grunt) {
 
     'use strict';
 
+    var config = require('config');
+
     grunt.config('watch', {
         css: {
             files: [
-                'admin/sass/**/*.scss',
-                'sass/**/*.scss'
+                config.paths.admin + '/' + config.paths.sass + '/**/*.scss',
+                config.paths.sass + '/**/*.scss'
             ],
             tasks: [
                 'css'
@@ -14,10 +16,11 @@ module.exports = function (grunt) {
         },
         js: {
             files: [
-                '!admin/js/**/*.min.js',
-                '!js/**/*.min.js',
-                'admin/js/**/*.js',
-                'js/**/*.js',
+                '!' + config.paths.admin + '/' + config.paths.js + '/**/*.min.js',
+                '!' + config.paths.js + '/**/*.min.js',
+
+                config.paths.admin + '/' + config.paths.js + '/**/*.js',
+                config.paths.js + '/**/*.js'
             ],
             tasks: [
                 'js'

@@ -6,16 +6,17 @@ module.exports = function (grunt) {
 
     grunt.config('clean', {
         css: [
-            config.directories.admin + '/' + config.directories.css,
-            config.directories.css
+            config.paths.admin + '/' + config.paths.css,
+            config.paths.css
         ],
         js: [
             ''
         ],
         lib: [
-            config.files.composer.lock,
-            config.directories.config + '/' + config.files.sass.lint,
-            config.directories.lib
+            config.files.composerLock,
+
+            config.paths.config + '/' + config.files.sassLint,
+            config.paths.lib
         ]
     });
 
