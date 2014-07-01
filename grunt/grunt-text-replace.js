@@ -3,7 +3,15 @@ module.exports = function (grunt) {
     'use strict';
 
     var config = require('config'),
-        overwrite = true;
+        overwrite = true,
+        previous = {
+            copyright: '2014',
+            description: 'DESCRIPTION',
+            package: 'PACKAGE',
+            name: 'NAME',
+            repository: 'REPOSITORY',
+            version: '0.0.0'
+        };
 
     grunt.config('replace', {
         copyright: {
@@ -13,8 +21,8 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: '@copyright ' + config.copyright.from,
-                    to: '@copyright ' + config.copyright.to
+                    from: '@copyright ' + previous.copyright,
+                    to: '@copyright ' + config.copyright
                 }
             ]
         },
@@ -29,20 +37,20 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: '"description": "' + config.description.from + '"',
-                    to: '"description": "' + config.description.to + '"'
+                    from: '"description": "' + previous.description + '"',
+                    to: '"description": "' + config.description + '"'
                 },
                 {
-                    from: '* Description: ' + config.description.from,
-                    to: '* Description: ' + config.description.to
+                    from: '* Description: ' + previous.description,
+                    to: '* Description: ' + config.description
                 },
                 {
-                    from: '* ' + config.description.from,
-                    to: '* ' + config.description.to
+                    from: '* ' + previous.description,
+                    to: '* ' + config.description
                 },
                 {
-                    from: config.description.from,
-                    to: config.description.to
+                    from: previous.description,
+                    to: config.description
                 }
             ]
         },
@@ -53,8 +61,8 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: '* Plugin Name: ' + config.name.from,
-                    to: '* Plugin Name: ' + config.name.to
+                    from: '* Plugin Name: ' + previous.name,
+                    to: '* Plugin Name: ' + config.name
                 }
             ]
         },
@@ -65,8 +73,8 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: '@package ' + config.package.from,
-                    to: '@package ' + config.package.to
+                    from: '@package ' + previous.package,
+                    to: '@package ' + config.package
                 }
             ]
         },
@@ -81,20 +89,20 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: '"name": "' + config.repository.from + '"',
-                    to: '"name": "' + config.repository.to + '"'
+                    from: '"name": "' + previous.repository + '"',
+                    to: '"name": "' + config.repository + '"'
                 },
                 {
-                    from: '"name": "manovotny/' + config.repository.from + '"',
-                    to: '"name": "manovotny/' + config.repository.to + '"'
+                    from: '"name": "manovotny/' + previous.repository + '"',
+                    to: '"name": "manovotny/' + config.repository + '"'
                 },
                 {
-                    from: 'manovotny/' + config.repository.from,
-                    to: 'manovotny/' + config.repository.to
+                    from: 'manovotny/' + previous.repository,
+                    to: 'manovotny/' + config.repository
                 },
                 {
-                    from: config.repository.from,
-                    to: config.repository.to
+                    from: previous.repository,
+                    to: config.repository
                 }
             ]
         },
@@ -108,12 +116,44 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: '"version": "' + config.version.from + '"',
-                    to: '"version": "' + config.version.to + '"'
+                    from: '"version": "' + previous.version + '"',
+                    to: '"version": "' + config.version + '"'
                 },
                 {
-                    from: '$version = \'' + config.version.from + '\'',
-                    to: '$version = \'' + config.version.to + '\''
+                    from: '$version = \'' + previous.version + '\'',
+                    to: '$version = \'' + config.version + '\''
+                }
+            ]
+        },
+        updatePrevious: {
+            src: [
+                'grunt/grunt-text-replace.js'
+            ],
+            overwrite: overwrite,
+            replacements: [
+                {
+                    from: "copyright: '" + previous.copyright + "'",
+                    to: "copyright: '" + config.copyright + "'"
+                },
+                {
+                    from: "description: '" + previous.description + "'",
+                    to: "description: '" + config.description + "'"
+                },
+                {
+                    from: "package: '" + previous.package + "'",
+                    to: "package: '" + config.package + "'"
+                },
+                {
+                    from: "name: '" + previous.name + "'",
+                    to: "name: '" + config.name + "'"
+                },
+                {
+                    from: "repository: '" + previous.repository + "'",
+                    to: "repository: '" + config.repository + "'"
+                },
+                {
+                    from: "version: '" + previous.version + "'",
+                    to: "version: '" + config.version + "'"
                 }
             ]
         }
