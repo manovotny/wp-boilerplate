@@ -20,9 +20,9 @@ module.exports = function (grunt) {
                 '!' + config.paths.js + '/**/*.min.js',
 
                 config.paths.admin + '/' + config.paths.js + '/**/*.js',
-                config.paths.js + '/**/*.js',
                 config.paths.config + '/*.js',
                 config.paths.grunt + '/*.js',
+                config.paths.js + '/**/*.js',
 
                 config.files.bower,
                 config.files.composer,
