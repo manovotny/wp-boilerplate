@@ -10,7 +10,9 @@ module.exports = function (grunt) {
             config.paths.css
         ],
         js: [
+            config.paths.admin + '/' + config.paths.js + '/**/*.concat.js',
             config.paths.admin + '/' + config.paths.js + '/**/*.min.js',
+            config.paths.js + '/**/*.concat.js',
             config.paths.js + '/**/*.min.js'
         ],
         lib: [
