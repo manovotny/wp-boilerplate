@@ -23,9 +23,12 @@ module.exports = (function () {
             config: 'config',
             css: 'css',
             grunt: 'grunt',
+            inc: 'inc',
             js: 'js',
             lib: 'lib',
-            sass: 'sass'
+            phpunit: 'vendor/bin/phpunit',
+            sass: 'sass',
+            tests: 'tests'
         },
         name: 'NAME',
         repository: 'REPOSITORY',

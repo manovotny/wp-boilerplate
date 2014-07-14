@@ -4,6 +4,7 @@ default:
 
 build:
   - lib
+  - php
   - css
   - js
 
@@ -22,3 +23,7 @@ js:
 lib:
   - clean:lib
   - copy
+
+php:
+  - phplint
+  - phpunit

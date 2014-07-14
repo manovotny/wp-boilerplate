@@ -16,6 +16,8 @@
     "grunt-contrib-sass": "~0.7.3",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-jslint": "~1.1.12",
+    "grunt-phplint": "0.0.5",
+    "grunt-phpunit": "~0.3.3",
     "grunt-scss-lint": "~0.1.12",
     "grunt-text-replace": "~0.3.12",
     "load-grunt-config": "~0.10.0",

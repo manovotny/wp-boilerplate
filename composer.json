@@ -12,6 +12,7 @@
     }
   ],
   "require": {
-    "manovotny/TODO": "0.0.0"
-    }
+    "manovotny/TODO": "0.0.0",
+    "phpunit/phpunit": "4.1.*"
+  }
 }
