@@ -2,7 +2,8 @@ module.exports = function (grunt) {
 
     'use strict';
 
-    var expand = true,
+    var config = require('config'),
+        expand = true,
         extension = '.css',
         options = {
             outputStyle: 'compressed'
