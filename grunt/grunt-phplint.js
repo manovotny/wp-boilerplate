@@ -10,7 +10,8 @@ module.exports = function (grunt) {
             config.paths.classes + '/**/*.php',
             config.paths.inc + '/**/*.php',
             config.paths.tests + '/**/*.php',
-            config.paths.views + '/**/*.php'
+            config.paths.views + '/**/*.php',
+            '*.php'
         ]
     });
 
