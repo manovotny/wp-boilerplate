@@ -16,11 +16,11 @@ module.exports = function (grunt) {
         },
         js: {
             files: [
-                '!' + config.paths.admin + '/' + config.paths.js + '/**/*.min.js',
-                '!' + config.paths.js + '/**/*.min.js',
-
                 config.paths.admin + '/' + config.paths.js + '/**/*.js',
-                config.paths.js + '/**/*.js'
+                config.paths.js + '/**/*.js',
+
+                '!' + config.paths.admin + '/' + config.paths.js + '/**/*.min.js',
+                '!' + config.paths.js + '/**/*.min.js'
             ],
             tasks: [
                 'js'

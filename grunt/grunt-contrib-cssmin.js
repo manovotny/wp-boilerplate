@@ -10,6 +10,7 @@ module.exports = function (grunt) {
         },
         source = [
             '*.css',
+            
             '!*.min.css'
         ];
 
