@@ -14,6 +14,7 @@ module.exports = (function () {
             readme: 'README.md',
             sassLint: '.scss-lint.yml'
         },
+        name: 'NAME',
         package: 'PACKAGE',
         paths: {
             admin: 'admin',
@@ -30,7 +31,6 @@ module.exports = (function () {
             sass: 'sass',
             tests: 'tests'
         },
-        name: 'NAME',
         repository: 'REPOSITORY',
         version: '0.0.0'
     };
