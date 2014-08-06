@@ -2,7 +2,10 @@ module.exports = (function () {
 
     'use strict';
 
-    var files = {
+    return {
+        copyright: '2014',
+        description: 'DESCRIPTION',
+        files: {
             bower: 'bower.json',
             composer: 'composer.json',
             composerLock: 'composer.lock',
@@ -11,7 +14,9 @@ module.exports = (function () {
             readme: 'README.md',
             sassLint: '.scss-lint.yml'
         },
-        paths = {
+        name: 'NAME',
+        package: 'PACKAGE',
+        paths: {
             admin: 'admin',
             bower: 'bower_components',
             classes: 'classes',
@@ -25,31 +30,8 @@ module.exports = (function () {
             phpunit: 'vendor/bin/phpunit',
             sass: 'sass',
             tests: 'tests'
-        };
-
-    return {
-        copyright: '2014',
-        description: 'DESCRIPTION',
-        files: files,
-        name: 'NAME',
-        package: 'PACKAGE',
-        paths: paths,
-        repository: 'REPOSITORY',
-        sources: {
-            lib: [
-                '**/*',
-
-                '!**/' + paths.grunt + '/**',
-                '!**/' + paths.tests + '/**',
-                '!**/' + paths.composer + '/**',
-
-                '!**/.git*',
-                '!**/' + files.bower,
-                '!**/' + files.composer,
-                '!**/' + files.grunt,
-                '!**/' + files.package
-            ]
         },
+        repository: 'REPOSITORY',
         version: '0.0.0'
     };
 

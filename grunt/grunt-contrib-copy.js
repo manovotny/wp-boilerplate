@@ -22,7 +22,19 @@ module.exports = function (grunt) {
                 {
                     expand: true,
                     cwd: config.paths.composer + '/manovotny',
-                    src: config.sources.lib,
+                    src: [
+                        '**/*',
+
+                        '!**/' + config.paths.grunt + '/**',
+                        '!**/' + config.paths.tests + '/**',
+                        '!**/' + config.paths.composer + '/**',
+
+                        '!**/.git*',
+                        '!**/' + config.files.bower,
+                        '!**/' + config.files.composer,
+                        '!**/' + config.files.grunt,
+                        '!**/' + config.files.package
+                    ],
                     dest: config.paths.lib
                 }
             ]
