@@ -5,6 +5,11 @@ module.exports = function (grunt) {
     var config = require('config'),
         overwrite = true,
         previous = {
+            author: {
+                email: 'AUTHOR_EMAIL',
+                name: 'AUTHOR_NAME',
+                url: 'AUTHOR_URL'
+            },
             copyright: '2014',
             description: 'DESCRIPTION',
             package: 'PACKAGE',
@@ -14,6 +19,65 @@ module.exports = function (grunt) {
         };
 
     grunt.config('replace', {
+        authorEmail: {
+            src: [
+                '**/*.json',
+                '**/*.php'
+            ],
+            overwrite: overwrite,
+            replacements: [
+                {
+                    from: '"email": "' + previous.author.email + '"',
+                    to: '"email": "' + config.author.email + '"'
+                },
+                {
+                    from: ' <' + previous.author.email + '>',
+                    to: ' <' + config.author.email + '>'
+                }
+            ]
+        },
+        authorName: {
+            src: [
+                '**/*.json',
+                '**/*.php'
+            ],
+            overwrite: overwrite,
+            replacements: [
+                {
+                    from: '* @author ' + previous.author.name,
+                    to: '* @author ' + config.author.name
+                },
+                {
+                    from: '* Author: ' + previous.author.name,
+                    to: '* Author: ' + config.author.name
+                },
+                {
+                    from: '"author": "' + previous.author.name,
+                    to: '"author": "' + config.author.name
+                },
+                {
+                    from: '"name": "' + previous.author.name + '"',
+                    to: '"name": "' + config.author.name + '"'
+                }
+            ]
+        },
+        authorUrl: {
+            src: [
+                '**/*.json',
+                '**/*.php'
+            ],
+            overwrite: overwrite,
+            replacements: [
+                {
+                    from: '"homepage": "' + previous.author.url + '"',
+                    to: '"homepage": "' + config.author.url + '"'
+                },
+                {
+                    from: ' <' + previous.author.url + '>',
+                    to: ' <' + config.author.url + '>'
+                }
+            ]
+        },
         copyright: {
             src: [
                 '**/*.php'
@@ -141,8 +205,16 @@ module.exports = function (grunt) {
                     to: "description: '" + config.description + "'"
                 },
                 {
+                    from: "email: '" + previous.author.email + "'",
+                    to: "email: '" + config.author.email + "'"
+                },
+                {
                     from: "package: '" + previous.package + "'",
                     to: "package: '" + config.package + "'"
+                },
+                {
+                    from: "name: '" + previous.author.name + "'",
+                    to: "name: '" + config.author.name + "'"
                 },
                 {
                     from: "name: '" + previous.name + "'",
@@ -151,6 +223,10 @@ module.exports = function (grunt) {
                 {
                     from: "repository: '" + previous.repository + "'",
                     to: "repository: '" + config.repository + "'"
+                },
+                {
+                    from: "url: '" + previous.author.url + "'",
+                    to: "url: '" + config.author.url + "'"
                 },
                 {
                     from: "version: '" + previous.version + "'",

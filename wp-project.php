@@ -3,7 +3,7 @@
  * DESCRIPTION
  *
  * @package PACKAGE
- * @author Michael Novotny <manovotny@gmail.com>
+ * @author AUTHOR_NAME <AUTHOR_EMAIL>
  * @license GPL-3.0+
  * @link https://github.com/manovotny/REPOSITORY
  * @copyright 2014 Michael Novotny
@@ -13,8 +13,8 @@
  * Plugin URI: https://github.com/manovotny/REPOSITORY
  * Description: DESCRIPTION
  * Version: 0.0.0
- * Author: Michael Novotny
- * Author URI: http://manovotny.com
+ * Author: AUTHOR_NAME
+ * Author URI: AUTHOR_URL
  * License: GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  * GitHub Plugin URI: https://github.com/manovotny/REPOSITORY

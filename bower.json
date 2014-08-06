@@ -12,9 +12,9 @@
   ],
   "authors": [
     {
-      "name": "Michael Novotny",
-      "email": "manovotny@gmail.com",
-      "homepage": "http://manovotny.com"
+      "name": "AUTHOR_NAME",
+      "email": "AUTHOR_EMAIL",
+      "homepage": "AUTHOR_URL"
     }
   ],
   "dependencies": {
