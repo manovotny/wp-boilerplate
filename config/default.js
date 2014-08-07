@@ -8,7 +8,7 @@ module.exports = (function () {
             name: 'AUTHOR_NAME',
             url: 'AUTHOR_URL'
         },
-        copyright: '2014',
+        copyright: 'COPYRIGHT',
         description: 'DESCRIPTION',
         files: {
             bower: 'bower.json',

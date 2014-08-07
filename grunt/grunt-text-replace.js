@@ -10,7 +10,7 @@ module.exports = function (grunt) {
                 name: 'AUTHOR_NAME',
                 url: 'AUTHOR_URL'
             },
-            copyright: '2014',
+            copyright: 'COPYRIGHT',
             description: 'DESCRIPTION',
             package: 'PACKAGE',
             name: 'NAME',
@@ -44,12 +44,12 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: '* @author ' + previous.author.name,
-                    to: '* @author ' + config.author.name
+                    from: '@author ' + previous.author.name,
+                    to: '@author ' + config.author.name
                 },
                 {
-                    from: '* Author: ' + previous.author.name,
-                    to: '* Author: ' + config.author.name
+                    from: 'Author: ' + previous.author.name,
+                    to: 'Author: ' + config.author.name
                 },
                 {
                     from: '"author": "' + previous.author.name,
@@ -105,8 +105,8 @@ module.exports = function (grunt) {
                     to: '"description": "' + config.description + '"'
                 },
                 {
-                    from: '* Description: ' + previous.description,
-                    to: '* Description: ' + config.description
+                    from: 'Description: ' + previous.description,
+                    to: 'Description: ' + config.description
                 },
                 {
                     from: '* ' + previous.description,
@@ -125,8 +125,8 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: '* Plugin Name: ' + previous.name,
-                    to: '* Plugin Name: ' + config.name
+                    from: 'Plugin Name: ' + previous.name,
+                    to: 'Plugin Name: ' + config.name
                 }
             ]
         },
