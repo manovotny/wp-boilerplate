@@ -8,6 +8,9 @@ build:
   - css
   - js
 
+config:
+  - replace
+
 css:
   - clean:css
   - scsslint
@@ -21,7 +24,6 @@ js:
   - uglify
 
 lib:
-  - shell
   - clean:lib
   - copy
 
@@ -30,3 +32,7 @@ php:
 
 tests:
   - phpunit
+
+#manual:
+#  - shell
+#  - watch
