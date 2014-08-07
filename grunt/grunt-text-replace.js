@@ -19,7 +19,7 @@ module.exports = function (grunt) {
                 package: 'PROJECT_PACKAGE',
                 slug: 'PROJECT_SLUG',
                 url: 'PROJECT_URL',
-                version: 'PROJECT_VERSION'
+                version: '0.0.0'
             }
         };
 

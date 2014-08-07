@@ -12,7 +12,7 @@
  * Plugin Name: PROJECT_NAME
  * Plugin URI: PROJECT_URL
  * Description: PROJECT_DESCRIPTION
- * Version: PROJECT_VERSION
+ * Version: 0.0.0
  * Author: AUTHOR_NAME
  * Author URI: AUTHOR_URL
  * License: GPL-3.0+
