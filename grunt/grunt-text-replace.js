@@ -3,25 +3,8 @@ module.exports = function (grunt) {
     'use strict';
 
     var config = require('config'),
-        overwrite = true,
-        previous = {
-            author: {
-                email: 'AUTHOR_EMAIL',
-                name: 'AUTHOR_NAME',
-                url: 'AUTHOR_URL'
-            },
-            project: {
-                composer: 'PROJECT_COMPOSER',
-                copyright: 'PROJECT_COPYRIGHT',
-                description: 'PROJECT_DESCRIPTION',
-                git: 'PROJECT_GIT',
-                name: 'PROJECT_NAME',
-                package: 'PROJECT_PACKAGE',
-                slug: 'PROJECT_SLUG',
-                url: 'PROJECT_URL',
-                version: '0.0.0'
-            }
-        };
+        previous = require('../config/previous.js'),
+        overwrite = true;
 
     grunt.config('replace', {
         authorEmail: {
@@ -118,20 +101,20 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: '"description": "' + previous.description + '"',
-                    to: '"description": "' + config.description + '"'
+                    from: '"description": "' + previous.project.description + '"',
+                    to: '"description": "' + config.project.description + '"'
                 },
                 {
-                    from: 'Description: ' + previous.description,
-                    to: 'Description: ' + config.description
+                    from: 'Description: ' + previous.project.description,
+                    to: 'Description: ' + config.project.description
                 },
                 {
-                    from: '* ' + previous.description,
-                    to: '* ' + config.description
+                    from: '* ' + previous.project.description,
+                    to: '* ' + config.project.description
                 },
                 {
-                    from: previous.description,
-                    to: config.description
+                    from: previous.project.description,
+                    to: config.project.description
                 }
             ]
         },
@@ -262,7 +245,7 @@ module.exports = function (grunt) {
         },
         updatePreviousProject: {
             src: [
-                config.paths.grunt + '/grunt-text-replace.js'
+                config.paths.config + '/previous.js'
             ],
             overwrite: overwrite,
             replacements: [
