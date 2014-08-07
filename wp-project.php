@@ -1,23 +1,23 @@
 <?php
 /**
- * DESCRIPTION
+ * PROJECT_DESCRIPTION
  *
- * @package PACKAGE
+ * @package PROJECT_PACKAGE
  * @author AUTHOR_NAME <AUTHOR_EMAIL>
  * @license GPL-3.0+
- * @link https://github.com/manovotny/REPOSITORY
- * @copyright COPYRIGHT
+ * @link PROJECT_URL
+ * @copyright PROJECT_COPYRIGHT
  *
  * @wordpress-plugin
- * Plugin Name: NAME
- * Plugin URI: https://github.com/manovotny/REPOSITORY
- * Description: DESCRIPTION
- * Version: 0.0.0
+ * Plugin Name: PROJECT_NAME
+ * Plugin URI: PROJECT_URL
+ * Description: PROJECT_DESCRIPTION
+ * Version: PROJECT_VERSION
  * Author: AUTHOR_NAME
  * Author URI: AUTHOR_URL
  * License: GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
- * GitHub Plugin URI: https://github.com/manovotny/REPOSITORY
+ * GitHub Plugin URI: PROJECT_URL
  */
 
 /* Access
@@ -38,14 +38,14 @@ wp_enqueue_script( 'TODO' );
 /* Libraries
 ---------------------------------------------------------------------------------- */
 
-require_once __DIR__ . '/lib/TODO/TODO.php';
+require_once __DIR__ . '/lib/';
 
 /* Classes
 ---------------------------------------------------------------------------------- */
 
 if ( ! class_exists( 'TODO' ) ) {
 
-    require_once __DIR__ . '/classes/class-wp-todo.php';
+    require_once __DIR__ . '/classes/';
 
 }
 
@@ -54,18 +54,18 @@ if ( ! class_exists( 'TODO' ) ) {
 
 if ( ! class_exists( 'TODO' ) ) {
 
-    require_once __DIR__ . '/classes/widgets/class-wp-todo-widget.php';
+    require_once __DIR__ . '/classes/widgets/';
 
-    add_action( 'widgets_init', create_function( '', 'register_widget("WP_TODO_Widget");' ) );
+    add_action( 'widgets_init', create_function( '', 'register_widget("TODO");' ) );
 
 }
 
 /* Admin
 ---------------------------------------------------------------------------------- */
 
-require_once __DIR__ . '/admin/TODO.php';
+require_once __DIR__ . '/admin/inc/';
 
 /* Includes
 ---------------------------------------------------------------------------------- */
 
-require_once __DIR__ . '/inc/TODO.php';
+require_once __DIR__ . '/inc/';

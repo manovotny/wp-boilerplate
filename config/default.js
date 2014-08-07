@@ -8,8 +8,6 @@ module.exports = (function () {
             name: 'AUTHOR_NAME',
             url: 'AUTHOR_URL'
         },
-        copyright: 'COPYRIGHT',
-        description: 'DESCRIPTION',
         files: {
             bower: 'bower.json',
             composer: 'composer.json',
@@ -19,8 +17,6 @@ module.exports = (function () {
             readme: 'README.md',
             sassLint: '.scss-lint.yml'
         },
-        name: 'NAME',
-        package: 'PACKAGE',
         paths: {
             admin: 'admin',
             bower: 'bower_components',
@@ -36,8 +32,17 @@ module.exports = (function () {
             sass: 'sass',
             tests: 'tests'
         },
-        repository: 'REPOSITORY',
-        version: '0.0.0'
+        project: {
+            composer: 'PROJECT_COMPOSER',
+            copyright: 'PROJECT_COPYRIGHT',
+            description: 'PROJECT_DESCRIPTION',
+            git: 'PROJECT_GIT',
+            name: 'PROJECT_NAME',
+            package: 'PROJECT_PACKAGE',
+            slug: 'PROJECT_SLUG',
+            url: 'PROJECT_URL',
+            version: 'PROJECT_VERSION'
+        }
     };
 
 }());

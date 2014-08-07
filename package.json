@@ -1,11 +1,11 @@
 {
-  "name": "REPOSITORY",
-  "version": "0.0.0",
-  "description": "DESCRIPTION",
+  "name": "PROJECT_SLUG",
+  "version": "PROJECT_VERSION",
+  "description": "PROJECT_DESCRIPTION",
   "author": "AUTHOR_NAME <AUTHOR_URL>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/manovotny/REPOSITORY/"
+    "url": "PROJECT_GIT"
   },
   "devDependencies": {
     "config": "~0.4.36",

@@ -1,13 +1,12 @@
 {
-  "name": "REPOSITORY",
-  "version": "0.0.0",
-  "description": "DESCRIPTION",
+  "name": "PROJECT_SLUG",
+  "version": "PROJECT_VERSION",
+  "description": "PROJECT_DESCRIPTION",
   "repository": {
     "type": "git",
-    "url": "git://github.com/manovotny/REPOSITORY.git"
+    "url": "PROJECT_GIT"
   },
   "keywords": [
-    "TODO",
     "wordpress"
   ],
   "authors": [
