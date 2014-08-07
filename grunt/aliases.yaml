@@ -1,9 +1,9 @@
 default:
   - build
-  - watch
 
 build:
   - lib
+  - tests
   - php
   - css
   - js
@@ -21,9 +21,12 @@ js:
   - uglify
 
 lib:
+  - shell
   - clean:lib
   - copy
 
 php:
   - phplint
+
+tests:
   - phpunit
