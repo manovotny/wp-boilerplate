@@ -11,12 +11,14 @@ module.exports = function (grunt) {
                 url: 'AUTHOR_URL'
             },
             project: {
+                composer: 'PROJECT_COMPOSER',
                 copyright: 'PROJECT_COPYRIGHT',
                 description: 'PROJECT_DESCRIPTION',
+                git: 'PROJECT_GIT',
                 name: 'PROJECT_NAME',
                 package: 'PROJECT_PACKAGE',
-                repository: 'PROJECT_REPOSITORY',
                 slug: 'PROJECT_SLUG',
+                url: 'PROJECT_URL',
                 version: 'PROJECT_VERSION'
             }
         };
@@ -88,8 +90,8 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: '"name": "manovotny/' + previous.project.composer + '"',
-                    to: '"name": "manovotny/' + config.project.composer + '"'
+                    from: '"name": "' + previous.project.composer + '"',
+                    to: '"name": "' + config.project.composer + '"'
                 }
             ]
         },
@@ -153,8 +155,8 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: 'Plugin Name: ' + previous.name,
-                    to: 'Plugin Name: ' + config.name
+                    from: 'Plugin Name: ' + previous.project.name,
+                    to: 'Plugin Name: ' + config.project.name
                 }
             ]
         },
@@ -165,8 +167,8 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: '@package ' + previous.package,
-                    to: '@package ' + config.package
+                    from: '@package ' + previous.project.package,
+                    to: '@package ' + config.project.package
                 }
             ]
         },
