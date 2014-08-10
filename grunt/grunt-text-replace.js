@@ -57,12 +57,28 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: '"homepage": "' + previous.author.url + '"',
-                    to: '"homepage": "' + config.author.url + '"'
-                },
-                {
                     from: ' <' + previous.author.url + '>',
                     to: ' <' + config.author.url + '>'
+                },
+                {
+                    from: 'Author URI: ' + previous.author.url,
+                    to: 'Author URI: ' + config.author.url
+                },
+                {
+                    from: '"homepage": "' + previous.author.url + '"',
+                    to: '"homepage": "' + config.author.url + '"'
+                }
+            ]
+        },
+        authorUsername: {
+            src: [
+                config.files.style
+            ],
+            overwrite: overwrite,
+            replacements: [
+                {
+                    from: 'Author: ' + previous.author.username,
+                    to: 'Author: ' + config.author.username
                 }
             ]
         },
@@ -96,7 +112,8 @@ module.exports = function (grunt) {
                 config.files.bower,
                 config.files.composer,
                 config.files.package,
-                config.files.readme
+                config.files.readme,
+                config.files.style
             ],
             overwrite: overwrite,
             replacements: [
@@ -133,13 +150,18 @@ module.exports = function (grunt) {
         },
         projectName: {
             src: [
-                '*.php'
+                '*.php',
+                config.files.style
             ],
             overwrite: overwrite,
             replacements: [
                 {
                     from: 'Plugin Name: ' + previous.project.name,
                     to: 'Plugin Name: ' + config.project.name
+                },
+                {
+                    from: 'Theme Name: ' + previous.project.name,
+                    to: 'Theme Name: ' + config.project.name
                 }
             ]
         },
@@ -176,25 +198,34 @@ module.exports = function (grunt) {
         projectUrl: {
             src: [
                 '*.php',
-                config.files.composer
+                config.files.composer,
+                config.files.style
             ],
             overwrite: overwrite,
             replacements: [
                 {
-                    from: '"homepage": "' + previous.project.url + '"',
-                    to: '"homepage": "' + config.project.url + '"'
-                },
-                {
                     from: '@link ' + previous.project.url,
                     to: '@link ' + config.project.url
+                },
+                {
+                    from: 'GitHub Plugin URI: ' + previous.project.url,
+                    to: 'GitHub Plugin URI: ' + config.project.url
+                },
+                {
+                    from: 'GitHub Theme URI: ' + previous.project.url,
+                    to: 'GitHub Theme URI: ' + config.project.url
+                },
+                {
+                    from: '"homepage": "' + previous.project.url + '"',
+                    to: '"homepage": "' + config.project.url + '"'
                 },
                 {
                     from: 'Plugin URI: ' + previous.project.url,
                     to: 'Plugin URI: ' + config.project.url
                 },
                 {
-                    from: 'GitHub Plugin URI: ' + previous.project.url,
-                    to: 'GitHub Plugin URI: ' + config.project.url
+                    from: 'Theme URI: ' + previous.project.url,
+                    to: 'Theme URI: ' + config.project.url
                 }
             ]
         },
@@ -280,6 +311,10 @@ module.exports = function (grunt) {
                 {
                     from: "url: '" + previous.project.url + "'",
                     to: "url: '" + config.project.url + "'"
+                },
+                {
+                    from: "username: '" + previous.project.username + "'",
+                    to: "username: '" + config.project.username + "'"
                 },
                 {
                     from: "version: '" + previous.project.version + "'",

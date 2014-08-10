@@ -6,7 +6,8 @@ module.exports = (function () {
         author: {
             email: 'AUTHOR_EMAIL',
             name: 'AUTHOR_NAME',
-            url: 'AUTHOR_URL'
+            url: 'AUTHOR_URL',
+            username: 'AUTHOR_USERNAME'
         },
         project: {
             composer: 'PROJECT_COMPOSER',

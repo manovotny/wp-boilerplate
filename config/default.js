@@ -6,7 +6,8 @@ module.exports = (function () {
         author: {
             email: 'AUTHOR_EMAIL',
             name: 'AUTHOR_NAME',
-            url: 'AUTHOR_URL'
+            url: 'AUTHOR_URL',
+            username: 'AUTHOR_USERNAME'
         },
         files: {
             bower: 'bower.json',
@@ -15,7 +16,8 @@ module.exports = (function () {
             grunt: 'Gruntfile.js',
             package: 'package.json',
             readme: 'README.md',
-            sassLint: '.scss-lint.yml'
+            sassLint: '.scss-lint.yml',
+            style: 'style.css'
         },
         paths: {
             admin: 'admin',
