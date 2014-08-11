@@ -13,9 +13,9 @@ module.exports = function (grunt) {
         admin: {
             files: [{
                 expand: expand,
-                cwd: config.paths.admin + config.paths.js,
+                cwd: config.paths.admin + '/' + config.paths.js,
                 src: source,
-                dest: config.paths.admin + config.paths.js,
+                dest: config.paths.admin + '/' + config.paths.js,
                 ext: extension
             }]
         },
