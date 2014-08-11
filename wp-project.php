@@ -5,19 +5,19 @@
  * @package PROJECT_PACKAGE
  * @author AUTHOR_NAME <AUTHOR_EMAIL>
  * @license GPL-3.0+
- * @link PROJECT_URL
+ * @link http://project-url.com
  * @copyright PROJECT_COPYRIGHT
  *
  * @wordpress-plugin
  * Plugin Name: PROJECT_NAME
- * Plugin URI: PROJECT_URL
+ * Plugin URI: http://project-url.com
  * Description: PROJECT_DESCRIPTION
  * Version: 0.0.0
  * Author: AUTHOR_NAME
  * Author URI: AUTHOR_URL
  * License: GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
- * GitHub Plugin URI: PROJECT_URL
+ * GitHub Plugin URI: http://project-url.com
  */
 
 /* Access

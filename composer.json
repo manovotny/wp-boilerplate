@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "PROJECT_DESCRIPTION",
   "type": "library",
-  "homepage": "PROJECT_URL",
+  "homepage": "http://project-url.com",
   "license": "GPL-3.0+",
   "require": {
     "phpunit/phpunit": "4.1.*"

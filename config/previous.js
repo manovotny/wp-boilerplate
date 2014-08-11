@@ -17,7 +17,7 @@ module.exports = (function () {
             name: 'PROJECT_NAME',
             package: 'PROJECT_PACKAGE',
             slug: 'PROJECT_SLUG',
-            url: 'PROJECT_URL',
+            url: 'http://project-url.com',
             version: '0.0.0'
         }
     };
