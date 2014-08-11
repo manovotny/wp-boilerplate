@@ -19,6 +19,10 @@ module.exports = (function () {
             slug: 'PROJECT_SLUG',
             url: 'http://project-url.com',
             version: '0.0.0'
+        },
+        translations: {
+            domain: 'TRANSLATIONS_DOMAIN',
+            path: 'TRANSLATIONS_PATH'
         }
     };
 

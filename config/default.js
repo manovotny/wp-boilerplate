@@ -32,7 +32,9 @@ module.exports = (function () {
             lib: 'lib',
             phpunit: 'vendor/bin/phpunit',
             sass: 'sass',
-            tests: 'tests'
+            tests: 'tests',
+            translations: 'lang',
+            views: 'views'
         },
         project: {
             composer: 'PROJECT_COMPOSER',
@@ -42,6 +44,7 @@ module.exports = (function () {
             name: 'PROJECT_NAME',
             package: 'PROJECT_PACKAGE',
             slug: 'PROJECT_SLUG',
+            type: 'PROJECT_TYPE', // Should be `plugin` or `theme`.
             url: 'http://project-url.com',
             version: '0.0.0'
         }

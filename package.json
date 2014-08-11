@@ -24,6 +24,7 @@
     "grunt-scss-lint": "~0.1.12",
     "grunt-shell": "~0.7.0",
     "grunt-text-replace": "~0.3.12",
+    "grunt-wp-i18n": "~0.4.7",
     "load-grunt-config": "~0.10.0",
     "time-grunt": "~0.3.2"
   }

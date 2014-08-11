@@ -254,6 +254,32 @@ module.exports = function (grunt) {
                 }
             ]
         },
+        translationsDomain: {
+            src: [
+                '*.php',
+                config.files.style
+            ],
+            overwrite: overwrite,
+            replacements: [
+                {
+                    from: 'Text Domain: ' + previous.translations.domain,
+                    to: 'Text Domain: ' + config.project.slug
+                }
+            ]
+        },
+        translationsPath: {
+            src: [
+                '*.php',
+                config.files.style
+            ],
+            overwrite: overwrite,
+            replacements: [
+                {
+                    from: 'Domain Path: /' + previous.translations.path,
+                    to: 'Domain Path: /' + config.paths.translations
+                }
+            ]
+        },
         updatePreviousAuthor: {
             src: [
                 config.paths.grunt + '/grunt-text-replace.js'
@@ -293,6 +319,10 @@ module.exports = function (grunt) {
                     to: "description: '" + config.project.description + "'"
                 },
                 {
+                    from: "domain: '" + previous.translations.domain + "'",
+                    to: "domain: '" + config.project.slug + "'"
+                },
+                {
                     from: "git: '" + previous.project.git + "'",
                     to: "git: '" + config.project.git + "'"
                 },
@@ -303,6 +333,10 @@ module.exports = function (grunt) {
                 {
                     from: "package: '" + previous.project.package + "'",
                     to: "package: '" + config.project.package + "'"
+                },
+                {
+                    from: "path: '" + previous.translations.path + "'",
+                    to: "path: '" + config.paths.translations + "'"
                 },
                 {
                     from: "slug: '" + previous.project.slug + "'",
