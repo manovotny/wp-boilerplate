@@ -15,6 +15,7 @@ css:
   - clean:css
   - scsslint
   - sass
+  - autoprefixer
   - cssmin
 
 js:
