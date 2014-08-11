@@ -15,7 +15,9 @@ module.exports = function (grunt) {
                 'npm-check-updates -u',
                 'npm update',
                 'npm update caniuse-db',
+                'npm prune',
                 'bower update',
+                'bower prune',
                 'composer update'
             ].join('&&')
         }
