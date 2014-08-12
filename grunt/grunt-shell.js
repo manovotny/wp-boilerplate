@@ -5,7 +5,6 @@ module.exports = function (grunt) {
     grunt.config('shell', {
         install: {
             command: [
-                'npm install',
                 'bower install',
                 'composer install'
             ].join('&&')
