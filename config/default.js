@@ -14,6 +14,7 @@ module.exports = (function () {
             composer: 'composer.json',
             composerLock: 'composer.lock',
             grunt: 'Gruntfile.js',
+            jshint: '.jshintrc',
             package: 'package.json',
             readme: 'README.md',
             sassLint: '.scss-lint.yml',

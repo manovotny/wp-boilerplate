@@ -20,12 +20,14 @@ css:
 js:
   - clean:js
   - jslint
+  - jshint
   - concat
   - uglify
 
 lib:
   - clean:lib
   - copy
+  - curl
 
 php:
   - phplint

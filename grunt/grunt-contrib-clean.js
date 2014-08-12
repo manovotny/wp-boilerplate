@@ -19,6 +19,7 @@ module.exports = function (grunt) {
             config.files.composerLock,
 
             config.paths.config + '/' + config.files.sassLint,
+            config.paths.config + '/' + config.files.jshint,
             config.paths.lib
         ]
     });
