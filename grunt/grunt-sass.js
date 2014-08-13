@@ -26,7 +26,7 @@ module.exports = function (grunt) {
                     }
                 ]
             },
-            root: {
+            site: {
                 options: options,
                 files: [
                     {

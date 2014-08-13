@@ -19,7 +19,7 @@ module.exports = function (grunt) {
                 ext: extension
             }]
         },
-        root: {
+        site: {
             files: [{
                 expand: expand,
                 cwd: config.paths.js,
