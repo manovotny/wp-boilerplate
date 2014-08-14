@@ -282,7 +282,7 @@ module.exports = function (grunt) {
         },
         update_author: {
             src: [
-                config.paths.grunt + config.files.replace
+                config.paths.config + '/' + config.files.replace
             ],
             overwrite: overwrite,
             replacements: [
@@ -302,7 +302,7 @@ module.exports = function (grunt) {
         },
         update_project: {
             src: [
-                config.paths.config + config.files.replace
+                config.paths.config + '/' + config.files.replace
             ],
             overwrite: overwrite,
             replacements: [
