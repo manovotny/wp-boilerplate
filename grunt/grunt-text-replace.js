@@ -7,7 +7,7 @@ module.exports = function (grunt) {
         overwrite = true;
 
     grunt.config('replace', {
-        authorEmail: {
+        author_email: {
             src: [
                 '**/*.json',
                 '**/*.php'
@@ -24,7 +24,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        authorName: {
+        author_name: {
             src: [
                 '**/*.json',
                 '**/*.php'
@@ -49,7 +49,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        authorUrl: {
+        author_url: {
             src: [
                 '**/*.json',
                 '**/*.php'
@@ -70,7 +70,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        authorUsername: {
+        author_username: {
             src: [
                 config.files.style
             ],
@@ -82,7 +82,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        projectComposer: {
+        project_composer: {
             src: [
                 config.files.composer
             ],
@@ -94,7 +94,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        projectCopyright: {
+        project_copytright: {
             src: [
                 '**/*.php'
             ],
@@ -106,7 +106,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        projectDescription: {
+        project_description: {
             src: [
                 '*.php',
                 config.files.bower,
@@ -135,7 +135,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        projectGit: {
+        project_git: {
             src: [
                 config.files.bower,
                 config.files.package
@@ -148,7 +148,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        projectName: {
+        project_name: {
             src: [
                 '*.php',
                 config.files.style
@@ -165,7 +165,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        projectPackage: {
+        project_package: {
             src: [
                 '**/*.php'
             ],
@@ -177,7 +177,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        projectSlug: {
+        project_slug: {
             src: [
                 config.files.bower,
                 config.files.package,
@@ -195,7 +195,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        projectUrl: {
+        project_url: {
             src: [
                 '*.php',
                 config.files.composer,
@@ -229,7 +229,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        projectVersion: {
+        project_version: {
             src: [
                 '*.php',
                 config.paths.classes + '/**/*.php',
@@ -254,7 +254,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        translationsDomain: {
+        translations_domain: {
             src: [
                 '*.php',
                 config.files.style
@@ -267,7 +267,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        translationsPath: {
+        translations_path: {
             src: [
                 '*.php',
                 config.files.style
@@ -280,9 +280,9 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        updatePreviousAuthor: {
+        update_previous_author: {
             src: [
-                config.paths.grunt + '/grunt-text-replace.js'
+                config.paths.grunt + '/previous.js'
             ],
             overwrite: overwrite,
             replacements: [
@@ -300,7 +300,7 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        updatePreviousProject: {
+        update_previous_project: {
             src: [
                 config.paths.config + '/previous.js'
             ],

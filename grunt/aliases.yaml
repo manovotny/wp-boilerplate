@@ -38,4 +38,4 @@ release:
   - test
   - build
   - generate
-  - replace:projectVersion
+  - replace:project_version
