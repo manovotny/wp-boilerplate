@@ -3,11 +3,11 @@ module.exports = function (grunt) {
     'use strict';
 
     var config = require('config'),
-        previous = require('../config/previous.js');
+        replace = require('../config/replace.js');
 
     grunt.config('rename', {
         project: {
-            src: previous.project.slug + '.php',
+            src: replace.project.slug + '.php',
             dest: config.project.slug + '.php'
         }
     });

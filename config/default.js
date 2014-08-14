@@ -17,6 +17,7 @@ module.exports = (function () {
             jshint: '.jshintrc',
             package: 'package.json',
             readme: 'README.md',
+            replace: 'replace.js',
             sassLint: '.scss-lint.yml',
             style: 'style.css'
         },
