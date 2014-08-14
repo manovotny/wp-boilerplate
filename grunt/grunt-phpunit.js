@@ -5,13 +5,13 @@ module.exports = function (grunt) {
     var config = require('config');
 
     grunt.config('phpunit', {
-        classes: {
-            coverage: true,
-            dir: config.paths.tests
-        },
         options: {
             bin: config.paths.phpunit,
             colors: true
+        },
+        classes: {
+            coverage: true,
+            dir: config.paths.tests
         }
     });
 
