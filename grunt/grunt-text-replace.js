@@ -343,6 +343,10 @@ module.exports = function (grunt) {
                     to: "slug: '" + config.project.slug + "'"
                 },
                 {
+                    from: "type: '" + replace.project.type + "'",
+                    to: "type: '" + config.project.type + "'"
+                },
+                {
                     from: "url: '" + replace.project.url + "'",
                     to: "url: '" + config.project.url + "'"
                 },
