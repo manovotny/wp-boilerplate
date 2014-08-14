@@ -1,40 +1,41 @@
 default:
   - build
 
-build:
-  - lib
-  - php
-  - css
-  - js
-
 config:
   - replace
   - rename
 
-css:
+build:
   - clean:css
-  - scsslint
+  - clean:js
+  - concat
   - sass
+
+generate:
   - autoprefixer
   - cssmin
-
-js:
-  - clean:js
-  - jslint
-  - jshint
+  - makepot
   - concat
   - uglify
 
-lib:
+update:
   - clean:lib
+  - shell:update
   - copy
   - curl
 
-php:
+lint:
+  - jshint
+  - jslint
   - phplint
-  - phpunit
-  - makepot
+  - scsslint
 
-#manual:
-#  - shell
-#  - watch
+test:
+  - phpunit
+
+release:
+  - lint
+  - test
+  - build
+  - generate
+  - replace:projectVersion
