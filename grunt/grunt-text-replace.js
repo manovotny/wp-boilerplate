@@ -355,6 +355,22 @@ module.exports = function (grunt) {
                     to: "version: '" + config.project.version + "'"
                 }
             ]
+        },
+        update_translations: {
+            src: [
+                config.paths.config + '/' + config.files.replace
+            ],
+            overwrite: overwrite,
+            replacements: [
+                {
+                    from: "domain: '" + replace.translations.domain + "'",
+                    to: "domain: '" + config.project.slug + "'"
+                },
+                {
+                    from: "path: '" + replace.translations.path + "'",
+                    to: "path: '" + config.paths.translations + "'"
+                }
+            ]
         }
     });
 
