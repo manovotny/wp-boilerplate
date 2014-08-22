@@ -3,7 +3,7 @@ module.exports = function (grunt) {
     'use strict';
 
     var config = require('config'),
-        exclude = [
+        predef = [
             'module',
             'require'
         ];
@@ -11,7 +11,8 @@ module.exports = function (grunt) {
     grunt.config('jslint', {
         js: {
             directives: {
-                predef: exclude
+                nomen: true,
+                predef: predef
             },
             src: [
                 config.paths.config + '/*.js',
