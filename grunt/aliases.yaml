@@ -14,6 +14,8 @@ config:
 build:
   - clean:css
   - clean:js
+  - lint
+  - test
   - concat
   - sass
 
@@ -41,8 +43,6 @@ test:
   - phpunit
 
 release:
-  - lint
-  - test
   - build
   - replace:project_version
   - generate
