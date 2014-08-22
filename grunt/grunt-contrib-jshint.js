@@ -11,10 +11,8 @@ module.exports = function (grunt) {
     // Read .jshintrc file from WordPress core.
     options = JSON.parse(grunt.file.read(jshintrc));
 
-    // Add Browserify globals.
-    options.globals.global = false;
-    options.globals.module = false;
-    options.globals.require = false;
+    // Enable Node.
+    options.node = true;
 
     // Add ignores.
     options.ignores = [
