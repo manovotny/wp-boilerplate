@@ -6,6 +6,7 @@
   "homepage": "http://project-url.com",
   "license": "GPL-3.0+",
   "require": {
+    "manovotny/wp-phpunit-helpers": "0.1.0",
     "phpunit/phpunit": "4.1.*"
   }
 }
