@@ -44,5 +44,5 @@ release:
   - lint
   - test
   - build
-  - generate
   - replace:project_version
+  - generate
