@@ -16,15 +16,15 @@ build:
   - clean:js
   - lint
   - test
-  - concat
+  - browserify:admin
+  - browserify:site
   - sass
 
 generate:
   - autoprefixer
   - cssmin
   - makepot
-  - concat
-  - uglify
+  - browserify
 
 update:
   - clean:lib
