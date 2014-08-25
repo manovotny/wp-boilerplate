@@ -2,13 +2,29 @@ module.exports = (function () {
 
     'use strict';
 
-    return {
-        author: {
+    var author = {
             email: 'AUTHOR_EMAIL',
             name: 'AUTHOR_NAME',
             url: 'AUTHOR_URL',
             username: 'AUTHOR_USERNAME'
         },
+        date = new Date(),
+        generatedCopyright = date.getFullYear() + ' ' + author.name,
+        project = {
+            composer: 'PROJECT_COMPOSER',
+            copyright: generatedCopyright,
+            description: 'PROJECT_DESCRIPTION',
+            git: 'PROJECT_GIT',
+            name: 'PROJECT_NAME',
+            package: 'PROJECT_PACKAGE',
+            slug: 'PROJECT_SLUG',
+            type: 'PROJECT_TYPE', // Should be `plugin` or `theme`.
+            url: 'http://project-url.com',
+            version: '0.0.0'
+        };
+
+    return {
+        author: author,
         files: {
             bower: 'bower.json',
             composer: 'composer.json',
@@ -38,18 +54,7 @@ module.exports = (function () {
             translations: 'lang',
             views: 'views'
         },
-        project: {
-            composer: 'PROJECT_COMPOSER',
-            copyright: 'PROJECT_COPYRIGHT',
-            description: 'PROJECT_DESCRIPTION',
-            git: 'PROJECT_GIT',
-            name: 'PROJECT_NAME',
-            package: 'PROJECT_PACKAGE',
-            slug: 'PROJECT_SLUG',
-            type: 'PROJECT_TYPE', // Should be `plugin` or `theme`.
-            url: 'http://project-url.com',
-            version: '0.0.0'
-        }
+        project: project
     };
 
 }());
