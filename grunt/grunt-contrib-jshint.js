@@ -5,11 +5,14 @@ module.exports = function (grunt) {
     var config = require('config'),
         stylish = require('jshint-stylish'),
 
-        jshintrc = config.paths.config + '/' + config.files.jshint,
+        jshintrc = config.paths.config + '/' + config.files.jshint, // .jshintrc file from WordPress core.
         options;
 
-    // Read .jshintrc file from WordPress core.
-    options = JSON.parse(grunt.file.read(jshintrc));
+    if (grunt.file.exists(jshintrc)) {
+        options = grunt.file.readJSON(jshintrc);
+    } else {
+        options = {};
+    }
 
     // Enable Node.
     options.node = true;
