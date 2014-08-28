@@ -17,10 +17,6 @@ module.exports = function (grunt) {
                 {
                     from: '"email": "' + replace.author.email + '"',
                     to: '"email": "' + config.author.email + '"'
-                },
-                {
-                    from: ' <' + replace.author.email + '>',
-                    to: ' <' + config.author.email + '>'
                 }
             ]
         },
@@ -31,10 +27,6 @@ module.exports = function (grunt) {
             ],
             overwrite: overwrite,
             replacements: [
-                {
-                    from: '@author ' + replace.author.name,
-                    to: '@author ' + config.author.name
-                },
                 {
                     from: 'Author: ' + replace.author.name,
                     to: 'Author: ' + config.author.name
@@ -94,18 +86,6 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        project_copytright: {
-            src: [
-                '**/*.php'
-            ],
-            overwrite: overwrite,
-            replacements: [
-                {
-                    from: '@copyright ' + replace.project.copyright,
-                    to: '@copyright ' + config.project.copyright
-                }
-            ]
-        },
         project_description: {
             src: [
                 '*.php',
@@ -124,10 +104,6 @@ module.exports = function (grunt) {
                 {
                     from: 'Description: ' + replace.project.description,
                     to: 'Description: ' + config.project.description
-                },
-                {
-                    from: '* ' + replace.project.description,
-                    to: '* ' + config.project.description
                 },
                 {
                     from: replace.project.description,
@@ -203,10 +179,6 @@ module.exports = function (grunt) {
             ],
             overwrite: overwrite,
             replacements: [
-                {
-                    from: '@link ' + replace.project.url,
-                    to: '@link ' + config.project.url
-                },
                 {
                     from: 'GitHub Plugin URI: ' + replace.project.url,
                     to: 'GitHub Plugin URI: ' + config.project.url

@@ -1,12 +1,6 @@
 <?php
 /**
- * PROJECT_DESCRIPTION
- *
  * @package PROJECT_PACKAGE
- * @author AUTHOR_NAME <AUTHOR_EMAIL>
- * @license GPL-3.0+
- * @link http://project-url.com
- * @copyright PROJECT_COPYRIGHT
  *
  * @wordpress-plugin
  * Plugin Name: PROJECT_NAME

@@ -11,7 +11,6 @@ module.exports = (function () {
         },
         project: {
             composer: 'PROJECT_COMPOSER',
-            copyright: 'PROJECT_COPYRIGHT',
             description: 'PROJECT_DESCRIPTION',
             git: 'PROJECT_GIT',
             name: 'PROJECT_NAME',
