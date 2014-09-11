@@ -4,6 +4,14 @@
   "description": "PROJECT_DESCRIPTION",
   "type": "library",
   "homepage": "http://project-url.com",
+  "authors": [
+    {
+      "name": "AUTHOR_NAME",
+      "email": "AUTHOR_EMAIL",
+      "homepage": "AUTHOR_URL",
+      "role": "Developer"
+    }
+  ],
   "license": "GPL-3.0+",
   "keywords": [
     "wordpress"
