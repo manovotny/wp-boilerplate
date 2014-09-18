@@ -4,6 +4,8 @@ module.exports = function (grunt) {
 
     var config = require('config'),
         replace = require('../config/replace.js'),
+
+        replaceFile = 'config/replace.js',
         overwrite = true;
 
     grunt.config('replace', {
@@ -64,7 +66,7 @@ module.exports = function (grunt) {
         },
         author_username: {
             src: [
-                config.files.style
+                'style.css'
             ],
             overwrite: overwrite,
             replacements: [
@@ -76,7 +78,7 @@ module.exports = function (grunt) {
         },
         project_composer: {
             src: [
-                config.files.composer
+                'composer.json'
             ],
             overwrite: overwrite,
             replacements: [
@@ -89,11 +91,9 @@ module.exports = function (grunt) {
         project_description: {
             src: [
                 '*.php',
-                config.files.bower,
-                config.files.composer,
-                config.files.package,
-                config.files.readme,
-                config.files.style
+                '*.json',
+                'README.md',
+                'style.css'
             ],
             overwrite: overwrite,
             replacements: [
@@ -113,8 +113,8 @@ module.exports = function (grunt) {
         },
         project_git: {
             src: [
-                config.files.bower,
-                config.files.package
+                'bower.json',
+                'package.json'
             ],
             overwrite: overwrite,
             replacements: [
@@ -127,7 +127,7 @@ module.exports = function (grunt) {
         project_name: {
             src: [
                 '*.php',
-                config.files.style
+                'style.css'
             ],
             overwrite: overwrite,
             replacements: [
@@ -155,9 +155,9 @@ module.exports = function (grunt) {
         },
         project_slug: {
             src: [
-                config.files.bower,
-                config.files.package,
-                config.files.readme
+                'bower.json',
+                'package.json',
+                'README.md'
             ],
             overwrite: overwrite,
             replacements: [
@@ -174,8 +174,8 @@ module.exports = function (grunt) {
         project_url: {
             src: [
                 '*.php',
-                config.files.composer,
-                config.files.style
+                'composer.json',
+                'style.css'
             ],
             overwrite: overwrite,
             replacements: [
@@ -204,12 +204,11 @@ module.exports = function (grunt) {
         project_version: {
             src: [
                 '*.php',
-                config.paths.classes + '/**/*.php',
+                '*.json',
 
-                config.files.bower,
-                config.files.composer,
-                config.files.package,
-                config.files.style
+                config.paths.source + '/classes/*.php',
+
+                'style.css'
             ],
             overwrite: overwrite,
             replacements: [
@@ -230,7 +229,7 @@ module.exports = function (grunt) {
         translations_domain: {
             src: [
                 '*.php',
-                config.files.style
+                'style.css'
             ],
             overwrite: overwrite,
             replacements: [
@@ -243,7 +242,7 @@ module.exports = function (grunt) {
         translations_path: {
             src: [
                 '*.php',
-                config.files.style
+                'style.css'
             ],
             overwrite: overwrite,
             replacements: [
@@ -255,7 +254,7 @@ module.exports = function (grunt) {
         },
         update_author: {
             src: [
-                config.paths.config + '/' + config.files.replace
+                replaceFile
             ],
             overwrite: overwrite,
             replacements: [
@@ -275,7 +274,7 @@ module.exports = function (grunt) {
         },
         update_project: {
             src: [
-                config.paths.config + '/' + config.files.replace
+                replaceFile
             ],
             overwrite: overwrite,
             replacements: [
@@ -335,7 +334,7 @@ module.exports = function (grunt) {
         },
         update_translations: {
             src: [
-                config.paths.config + '/' + config.files.replace
+                replaceFile
             ],
             overwrite: overwrite,
             replacements: [

@@ -2,7 +2,7 @@
   "name": "PROJECT_SLUG",
   "version": "0.0.0",
   "description": "PROJECT_DESCRIPTION",
-  "author": "AUTHOR_NAME <AUTHOR_URL>",
+  "author": "AUTHOR_NAME <http://author-url.com>",
   "repository": {
     "type": "git",
     "url": "PROJECT_GIT"
@@ -13,7 +13,6 @@
     "grunt-autoprefixer": "~1.0.0",
     "grunt-browserify": "~2.1.4",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-cssmin": "~0.10.0",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-watch": "~0.6.1",
@@ -30,6 +29,7 @@
     "jshint-stylish": "~0.4.0",
     "load-grunt-config": "~0.10.0",
     "time-grunt": "~0.3.2",
-    "uglifyify": "~2.5.0"
+    "uglifyify": "~2.5.0",
+    "underscore": "~1.7.0"
   }
 }

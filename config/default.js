@@ -4,39 +4,18 @@ module.exports = (function () {
 
     return {
         author: {
-            email: 'AUTHOR_EMAIL',
+            email: 'author@email.com',
             name: 'AUTHOR_NAME',
-            url: 'AUTHOR_URL',
+            url: 'http://author-url.com',
             username: 'AUTHOR_USERNAME'
         },
         files: {
-            bower: 'bower.json',
-            composer: 'composer.json',
-            composerLock: 'composer.lock',
-            grunt: 'Gruntfile.js',
-            jshint: '.jshintrc',
-            package: 'package.json',
-            readme: 'README.md',
-            replace: 'replace.js',
-            sassLint: '.scss-lint.yml',
-            style: 'style.css'
+            browserify: 'bundle'
         },
         paths: {
-            admin: 'admin',
-            bower: 'bower_components',
-            classes: 'classes',
-            composer: 'vendor',
-            config: 'config',
-            css: 'css',
-            grunt: 'grunt',
-            inc: 'inc',
-            js: 'js',
-            lib: 'lib',
-            phpunit: 'vendor/bin/phpunit',
-            sass: 'sass',
-            tests: 'tests',
-            translations: 'lang',
-            views: 'views'
+            curl: 'downloads',
+            source: 'src',
+            translations: 'lang'
         },
         project: {
             composer: 'PROJECT_COMPOSER',

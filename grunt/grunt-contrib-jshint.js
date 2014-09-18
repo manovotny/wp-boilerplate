@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     var config = require('config'),
         stylish = require('jshint-stylish'),
 
-        jshintrc = config.paths.config + '/' + config.files.jshint, // .jshintrc file from WordPress core.
+        jshintrc = config.paths.curl + '/.jshintrc', // .jshintrc file from WordPress core.
         options;
 
     if (grunt.file.exists(jshintrc)) {
@@ -19,10 +19,7 @@ module.exports = function (grunt) {
 
     // Add ignores.
     options.ignores = [
-        config.paths.admin + '/' + config.paths.js + '/**/*.concat.js',
-        config.paths.admin + '/' + config.paths.js + '/**/*.min.js',
-        config.paths.js + '/**/*.concat.js',
-        config.paths.js + '/**/*.min.js'
+        config.paths.source + '/**/' + config.files.browserify + '.*.js'
     ];
 
     // Add reporter.
@@ -32,8 +29,7 @@ module.exports = function (grunt) {
         options: options,
         js: {
             src: [
-                config.paths.admin + '/' + config.paths.js + '/**/*.js',
-                config.paths.js + '/**/*.js'
+                config.paths.source + '/**/*.js'
             ]
         }
     });

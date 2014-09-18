@@ -12,8 +12,8 @@
   "authors": [
     {
       "name": "AUTHOR_NAME",
-      "email": "AUTHOR_EMAIL",
-      "homepage": "AUTHOR_URL"
+      "email": "author@email.com",
+      "homepage": "http://author-url.com"
     }
   ],
   "dependencies": {

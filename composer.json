@@ -1,23 +1,36 @@
 {
-  "name": "PROJECT_COMPOSER",
-  "version": "0.0.0",
-  "description": "PROJECT_DESCRIPTION",
-  "type": "library",
-  "homepage": "http://project-url.com",
-  "authors": [
-    {
-      "name": "AUTHOR_NAME",
-      "email": "AUTHOR_EMAIL",
-      "homepage": "AUTHOR_URL",
-      "role": "Developer"
+    "name": "PROJECT_COMPOSER",
+    "version": "0.0.0",
+    "description": "PROJECT_DESCRIPTION",
+    "type": "library",
+    "homepage": "http://project-url.com",
+    "authors": [
+        {
+            "name": "AUTHOR_NAME",
+            "email": "author@email.com",
+            "homepage": "http://author-url.com",
+            "role": "Developer"
+        }
+    ],
+    "license": "GPL-3.0+",
+    "keywords": [
+        "wordpress"
+    ],
+    "require": {
+
+    },
+    "require-dev": {
+        "manovotny/wp-phpunit-helpers": "0.1.0",
+        "phpunit/phpunit": "4.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vendor\\Namespace\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vendor\\Namespace\\": "tests"
+        }
     }
-  ],
-  "license": "GPL-3.0+",
-  "keywords": [
-    "wordpress"
-  ],
-  "require": {
-    "manovotny/wp-phpunit-helpers": "0.1.0",
-    "phpunit/phpunit": "4.1.*"
-  }
 }
