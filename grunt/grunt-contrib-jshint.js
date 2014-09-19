@@ -14,8 +14,9 @@ module.exports = function (grunt) {
         options = {};
     }
 
-    // Enable Node.
+    // Enable additional options.
     options.node = true;
+    options.noempty = true;
 
     // Add ignores.
     options.ignores = [
@@ -29,6 +30,11 @@ module.exports = function (grunt) {
         options: options,
         js: {
             src: [
+                '*.js',
+                '*.json',
+                'config/*.js',
+                'grunt/*.js',
+
                 config.paths.source + '/**/*.js'
             ]
         }

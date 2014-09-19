@@ -32,7 +32,6 @@ update:
 
 lint:
   - jshint
-  - jslint
   - phplint
   - scsslint
 
