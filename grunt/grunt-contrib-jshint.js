@@ -31,11 +31,18 @@ module.exports = function (grunt) {
         js: {
             src: [
                 '*.js',
-                '*.json',
                 'config/*.js',
                 'grunt/*.js',
 
                 config.paths.source + '/**/*.js'
+            ]
+        },
+        json: {
+            options: {
+                quotmark: 'double'
+            },
+            src: [
+                '*.json'
             ]
         }
     });

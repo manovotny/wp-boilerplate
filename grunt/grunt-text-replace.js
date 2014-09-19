@@ -247,16 +247,16 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: "email: '" + replace.author.email + "'",
-                    to: "email: '" + config.author.email + "'"
+                    from: 'email: \'' + replace.author.email + '\'',
+                    to: 'email: \'' + config.author.email + '\''
                 },
                 {
-                    from: "name: '" + replace.author.name + "'",
-                    to: "name: '" + config.author.name + "'"
+                    from: 'name: \'' + replace.author.name + '\'',
+                    to: 'name: \'' + config.author.name + '\''
                 },
                 {
-                    from: "url: '" + replace.author.url + "'",
-                    to: "url: '" + config.author.url + "'"
+                    from: 'url: \'' + replace.author.url + '\'',
+                    to: 'url: \'' + config.author.url + '\''
                 }
             ]
         },
@@ -267,52 +267,52 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: "composer: '" + replace.project.copyright + "'",
-                    to: "composer: '" + config.project.copyright + "'"
+                    from: 'composer: \'' + replace.project.copyright + '\'',
+                    to: 'composer: \'' + config.project.copyright + '\''
                 },
                 {
-                    from: "copyright: '" + replace.project.copyright + "'",
-                    to: "copyright: '" + config.project.copyright + "'"
+                    from: 'copyright: \'' + replace.project.copyright + '\'',
+                    to: 'copyright: \'' + config.project.copyright + '\''
                 },
                 {
-                    from: "description: '" + replace.project.description + "'",
-                    to: "description: '" + config.project.description + "'"
+                    from: 'description: \'' + replace.project.description + '\'',
+                    to: 'description: \'' + config.project.description + '\''
                 },
                 {
-                    from: "domain: '" + replace.translations.domain + "'",
-                    to: "domain: '" + config.project.slug + "'"
+                    from: 'domain: \'' + replace.translations.domain + '\'',
+                    to: 'domain: \'' + config.project.slug + '\''
                 },
                 {
-                    from: "git: '" + replace.project.git + "'",
-                    to: "git: '" + config.project.git + "'"
+                    from: 'git: \'' + replace.project.git + '\'',
+                    to: 'git: \'' + config.project.git + '\''
                 },
                 {
-                    from: "name: '" + replace.project.name + "'",
-                    to: "name: '" + config.project.name + "'"
+                    from: 'name: \'' + replace.project.name + '\'',
+                    to: 'name: \'' + config.project.name + '\''
                 },
                 {
-                    from: "path: '" + replace.translations.path + "'",
-                    to: "path: '" + config.paths.translations + "'"
+                    from: 'path: \'' + replace.translations.path + '\'',
+                    to: 'path: \'' + config.paths.translations + '\''
                 },
                 {
-                    from: "slug: '" + replace.project.slug + "'",
-                    to: "slug: '" + config.project.slug + "'"
+                    from: 'slug: \'' + replace.project.slug + '\'',
+                    to: 'slug: \'' + config.project.slug + '\''
                 },
                 {
-                    from: "type: '" + replace.project.type + "'",
-                    to: "type: '" + config.project.type + "'"
+                    from: 'type: \'' + replace.project.type + '\'',
+                    to: 'type: \'' + config.project.type + '\''
                 },
                 {
-                    from: "url: '" + replace.project.url + "'",
-                    to: "url: '" + config.project.url + "'"
+                    from: 'url: \'' + replace.project.url + '\'',
+                    to: 'url: \'' + config.project.url + '\''
                 },
                 {
-                    from: "username: '" + replace.project.username + "'",
-                    to: "username: '" + config.project.username + "'"
+                    from: 'username: \'' + replace.project.username + '\'',
+                    to: 'username: \'' + config.project.username + '\''
                 },
                 {
-                    from: "version: '" + replace.project.version + "'",
-                    to: "version: '" + config.project.version + "'"
+                    from: 'version: \'' + replace.project.version + '\'',
+                    to: 'version: \'' + config.project.version + '\''
                 }
             ]
         },
@@ -323,12 +323,12 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: "domain: '" + replace.translations.domain + "'",
-                    to: "domain: '" + config.project.slug + "'"
+                    from: 'domain: \'' + replace.translations.domain + '\'',
+                    to: 'domain: \'' + config.project.slug + '\''
                 },
                 {
-                    from: "path: '" + replace.translations.path + "'",
-                    to: "path: '" + config.paths.translations + "'"
+                    from: 'path: \'' + replace.translations.path + '\'',
+                    to: 'path: \'' + config.paths.translations + '\''
                 }
             ]
         }
