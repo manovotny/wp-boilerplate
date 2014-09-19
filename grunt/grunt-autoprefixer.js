@@ -2,7 +2,7 @@ module.exports = function (grunt) {
 
     'use strict';
 
-    var _ = require('underscore'),
+    var _ = require('lodash'),
         config = require('config'),
 
         adminPath = config.paths.source + '/admin/css',
