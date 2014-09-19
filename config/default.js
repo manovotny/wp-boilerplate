@@ -13,7 +13,7 @@ module.exports = (function () {
             browserify: 'bundle'
         },
         paths: {
-            curl: 'downloads',
+            curl: 'curl_downloads',
             source: 'src',
             translations: 'lang'
         },
