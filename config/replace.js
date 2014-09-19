@@ -14,7 +14,6 @@ module.exports = (function () {
             description: 'PROJECT_DESCRIPTION',
             git: 'PROJECT_GIT',
             name: 'PROJECT_NAME',
-            package: 'PROJECT_PACKAGE',
             slug: 'PROJECT_SLUG',
             url: 'http://project-url.com',
             version: '0.0.0'

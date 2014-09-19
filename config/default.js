@@ -22,7 +22,6 @@ module.exports = (function () {
             description: 'PROJECT_DESCRIPTION',
             git: 'PROJECT_GIT',
             name: 'PROJECT_NAME',
-            package: 'PROJECT_PACKAGE',
             slug: 'PROJECT_SLUG',
             type: 'PROJECT_TYPE', // Should be `plugin` or `theme`.
             url: 'http://project-url.com',

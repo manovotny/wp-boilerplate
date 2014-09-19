@@ -141,18 +141,6 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        project_package: {
-            src: [
-                '**/*.php'
-            ],
-            overwrite: overwrite,
-            replacements: [
-                {
-                    from: '@package ' + replace.project.package,
-                    to: '@package ' + config.project.package
-                }
-            ]
-        },
         project_slug: {
             src: [
                 'bower.json',
@@ -301,10 +289,6 @@ module.exports = function (grunt) {
                 {
                     from: "name: '" + replace.project.name + "'",
                     to: "name: '" + config.project.name + "'"
-                },
-                {
-                    from: "package: '" + replace.project.package + "'",
-                    to: "package: '" + config.project.package + "'"
                 },
                 {
                     from: "path: '" + replace.translations.path + "'",
