@@ -24,13 +24,15 @@
         "phpunit/phpunit": "4.1.*"
     },
     "autoload": {
-        "psr-4": {
-            "Vendor\\Namespace\\": "src"
-        }
+        "classmap": [
+            "src"
+        ]
     },
     "autoload-dev": {
-        "psr-4": {
-            "Vendor\\Namespace\\": "tests"
-        }
+        "classmap": [
+            "vendor/phpunit",
+            "vendor/sebastian",
+            "vendor/symfony"
+        ]
     }
 }
