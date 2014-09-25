@@ -16,7 +16,7 @@
             "homepage": "http://author-url.com"
         }
     ],
-    "dependencies": {
+    "devDependencies": {
         "bootstrap-sass-official": "~3.2.0",
         "sass-lint-config": "git://github.com/manovotny/sass-lint-config.git#0.1.0"
     }
