@@ -24,7 +24,6 @@ module.exports = function (grunt) {
                 '!**/bower_components/**',
                 '!**/config/**',
                 '!**/grunt/**',
-                '!**/less/**',
                 '!**/node_modules/**',
                 '!**/sass/**',
                 '!**/tests/**'
