@@ -15,6 +15,7 @@ module.exports = function (grunt) {
                 '!**/.DS_Store',
                 '!**/bower.json',
                 '!**/composer.json',
+                '!**/composer.lock',
                 '!**/Gruntfile.js',
                 '!**/package.json',
 
