@@ -15,6 +15,7 @@ module.exports = function (grunt) {
         update: {
             command: [
                 'npm prune',
+                'npm install',
                 'npm-check-updates -u',
                 'npm update',
                 'npm update caniuse-db',
