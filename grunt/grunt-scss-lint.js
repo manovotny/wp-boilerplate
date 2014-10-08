@@ -2,24 +2,26 @@ module.exports = function (grunt) {
 
     'use strict';
 
-    var config = require('config'),
+    var _ = require('lodash'),
+        config = require('config'),
         glob = require('glob'),
 
-        pattern = '/**/*.scss',
-        task = {};
+        source = config.paths.source + '/**/*.scss',
+        task = {},
+        files;
 
-    glob(config.paths.source + pattern, {}, function (error, files) {
-        if (files) {
-            task = {
-                options: {
-                    config: 'bower_components/sass-lint-config/.scss-lint.yml'
-                },
-                src: [
-                    config.paths.source + pattern
-                ]
-            };
-        }
-    });
+    files = glob.sync(source, {});
+
+    if (!_.isEmpty(files)) {
+        task = {
+            options: {
+                config: 'bower_components/sass-lint-config/.scss-lint.yml'
+            },
+            src: [
+                source
+            ]
+        };
+    }
 
     grunt.config('scsslint', {
         sass: task
