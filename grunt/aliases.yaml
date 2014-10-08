@@ -15,15 +15,13 @@ build:
   - clean
   - lint
   - test
-  - browserify:admin
-  - browserify:site
+  - browserify
   - sass
 
 generate:
   - autoprefixer
   - cssmin
   - makepot
-  - browserify
   - unpathify
 
 update:
