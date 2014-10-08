@@ -24,6 +24,7 @@ generate:
   - cssmin
   - makepot
   - browserify
+  - unpathify
 
 update:
   - shell:update
