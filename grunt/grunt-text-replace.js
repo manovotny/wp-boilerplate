@@ -11,8 +11,8 @@ module.exports = function (grunt) {
     grunt.config('replace', {
         author_email: {
             src: [
-                '**/*.json',
-                '**/*.php'
+                '*.json',
+                '*.php'
             ],
             overwrite: overwrite,
             replacements: [
@@ -24,8 +24,8 @@ module.exports = function (grunt) {
         },
         author_name: {
             src: [
-                '**/*.json',
-                '**/*.php'
+                '*.json',
+                '*.php'
             ],
             overwrite: overwrite,
             replacements: [
@@ -45,8 +45,9 @@ module.exports = function (grunt) {
         },
         author_url: {
             src: [
-                '**/*.json',
-                '**/*.php'
+                '*.json',
+                '*.php',
+                'style.css'
             ],
             overwrite: overwrite,
             replacements: [
@@ -262,6 +263,10 @@ module.exports = function (grunt) {
                 {
                     from: 'url: \'' + replace.author.url + '\'',
                     to: 'url: \'' + config.author.url + '\''
+                },
+                {
+                    from: 'username: \'' + replace.author.username + '\'',
+                    to: 'username: \'' + config.author.username + '\''
                 }
             ]
         },
@@ -272,12 +277,8 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: 'composer: \'' + replace.project.copyright + '\'',
-                    to: 'composer: \'' + config.project.copyright + '\''
-                },
-                {
-                    from: 'copyright: \'' + replace.project.copyright + '\'',
-                    to: 'copyright: \'' + config.project.copyright + '\''
+                    from: 'composer: \'' + replace.project.composer + '\'',
+                    to: 'composer: \'' + config.project.composer + '\''
                 },
                 {
                     from: 'description: \'' + replace.project.description + '\'',

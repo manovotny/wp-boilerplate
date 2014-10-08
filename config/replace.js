@@ -4,9 +4,9 @@ module.exports = (function () {
 
     return {
         author: {
-            email: 'AUTHOR_EMAIL',
+            email: 'author@email.com',
             name: 'AUTHOR_NAME',
-            url: 'AUTHOR_URL',
+            url: 'http://author-url.com',
             username: 'AUTHOR_USERNAME'
         },
         project: {
