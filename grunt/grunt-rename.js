@@ -10,7 +10,7 @@ module.exports = function (grunt) {
         task = {
             src: replace.project.slug + '.php',
             dest: config.project.slug + '.php'
-        }
+        };
     }
 
     grunt.config('rename', {
