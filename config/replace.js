@@ -10,7 +10,10 @@ module.exports = (function () {
             username: 'AUTHOR_USERNAME'
         },
         project: {
-            composer: 'PROJECT_COMPOSER',
+            composer: {
+                name: 'PROJECT_COMPOSER_NAME',
+                type: 'PROJECT_COMPOSER_TYPE'
+            },
             description: 'PROJECT_DESCRIPTION',
             git: 'PROJECT_GIT',
             name: 'PROJECT_NAME',

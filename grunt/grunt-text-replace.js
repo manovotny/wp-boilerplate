@@ -77,15 +77,27 @@ module.exports = function (grunt) {
                 }
             ]
         },
-        project_composer: {
+        project_composer_name: {
             src: [
                 'composer.json'
             ],
             overwrite: overwrite,
             replacements: [
                 {
-                    from: '"name": "' + replace.project.composer + '"',
-                    to: '"name": "' + config.project.composer + '"'
+                    from: '"name": "' + replace.project.composer.name + '"',
+                    to: '"name": "' + config.project.composer.name + '"'
+                }
+            ]
+        },
+        project_composer_type: {
+            src: [
+                'composer.json'
+            ],
+            overwrite: overwrite,
+            replacements: [
+                {
+                    from: '"type": "' + replace.project.composer.type + '"',
+                    to: '"type": "' + config.project.composer.type + '"'
                 }
             ]
         },
@@ -277,8 +289,12 @@ module.exports = function (grunt) {
             overwrite: overwrite,
             replacements: [
                 {
-                    from: 'composer: \'' + replace.project.composer + '\'',
-                    to: 'composer: \'' + config.project.composer + '\''
+                    from: 'name: \'' + replace.project.composer.name + '\'',
+                    to: 'name: \'' + config.project.composer.name + '\''
+                },
+                {
+                    from: 'type: \'' + replace.project.composer.type + '\'',
+                    to: 'type: \'' + config.project.composer.type + '\''
                 },
                 {
                     from: 'description: \'' + replace.project.description + '\'',

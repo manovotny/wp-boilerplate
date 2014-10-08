@@ -18,7 +18,10 @@ module.exports = (function () {
             translations: 'lang'
         },
         project: {
-            composer: 'PROJECT_COMPOSER',
+            composer: {
+                name: 'PROJECT_COMPOSER_NAME',
+                type: 'PROJECT_COMPOSER_TYPE' // Should be `library` or `project`.
+            },
             description: 'PROJECT_DESCRIPTION',
             git: 'PROJECT_GIT',
             name: 'PROJECT_NAME',
