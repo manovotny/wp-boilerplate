@@ -29,6 +29,9 @@ module.exports = function (grunt) {
                 'bower update',
                 'composer update'
             ].join('&&')
+        },
+        upgrade: {
+            command: 'npm-check-updates -u'
         }
     });
 
