@@ -17,7 +17,7 @@
         }
     ],
     "devDependencies": {
-        "bootstrap-sass-official": "~3.2.0",
+        "bootstrap-sass-official": "^3.3.0",
         "sass-lint-config": "git://github.com/manovotny/sass-lint-config.git#0.1.0",
         "scut": "~1.0.1"
     }
