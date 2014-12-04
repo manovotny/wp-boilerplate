@@ -45,7 +45,6 @@ test:
 
 js:
   - browserify
-  - unpathify
 
 css:
   - sass
