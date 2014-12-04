@@ -1,8 +1,5 @@
 <?php
 /**
- * @package PROJECT_PACKAGE
- *
- * @wordpress-plugin
  * Plugin Name: PROJECT_NAME
  * Plugin URI: http://project-url.com
  * Description: PROJECT_DESCRIPTION
