@@ -33,6 +33,7 @@ build:
   - test
   - js
   - css
+  - images
 
 lint:
   - jshint
@@ -50,6 +51,11 @@ css:
   - sass
   - autoprefixer
   - cssmin
+
+images:
+  - imagemin:svg
+  - grunticon
+  - imagemin:png
 
 # Release
 #----------------------------------------------------------------------------------
