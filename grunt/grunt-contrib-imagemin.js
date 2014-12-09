@@ -20,6 +20,12 @@ module.exports = function (grunt) {
         };
 
     grunt.config('imagemin', {
+        options: {
+            svgoPlugins: [
+                { removeDesc: true },
+                { removeTitle: true }
+            ]
+        },
         png: {
             files: [
                 {
