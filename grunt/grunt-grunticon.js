@@ -20,6 +20,7 @@ module.exports = function (grunt) {
             datapngcss: 'png.css',
             datasvgcss: 'svg.css',
             loadersnippet: 'loader.txt',
+            template: 'bower_components/grunticon-templates/templates/width-and-height.min.hbs',
             urlpngcss: 'fallback.css'
         },
         admin: {
