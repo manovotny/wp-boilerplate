@@ -8,9 +8,9 @@ default:
 #----------------------------------------------------------------------------------
 
 init:
-  - shell:init
   - replace
   - rename
+  - shell:init
   - build
 
 refresh:
