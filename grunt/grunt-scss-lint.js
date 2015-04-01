@@ -15,7 +15,7 @@ module.exports = function (grunt) {
     if (!_.isEmpty(files)) {
         task = {
             options: {
-                config: 'bower_components/sass-lint-config/.scss-lint.yml'
+                config: 'config/.scss-lint.yml'
             },
             src: [
                 source
