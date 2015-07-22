@@ -12,6 +12,7 @@
     "globby": "^2.1.0",
     "gulp": "^3.9.0",
     "gulp-eslint": "^0.15.0",
+    "gulp-scss-lint": "^0.2.2",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
